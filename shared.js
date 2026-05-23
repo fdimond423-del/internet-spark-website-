@@ -1,0 +1,103 @@
+﻿/* Shared Nav & Footer Injector */
+(function() {
+  const isService = window.location.pathname.includes('/services/');
+  const base = isService ? '../' : '';
+  
+  const navHTML = `
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="${base}index.html" class="nav-logo"><img src="${base}images/logo.png" alt="Internet Spark Logo"></a>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item"><a href="${base}index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="${base}about.html" class="nav-link">About</a></li>
+        <li class="nav-item has-mega-menu">
+          <a href="${base}services.html" class="nav-link">Services <i class="fas fa-chevron-down" style="font-size:0.7rem"></i></a>
+          <div class="mega-menu"><div class="mega-menu-grid">
+            <a href="${base}services/social-media-marketing.html" class="mega-menu-item"><span class="icon">📱</span>Social Media</a>
+            <a href="${base}services/meta-ads.html" class="mega-menu-item"><span class="icon">📘</span>Meta Ads</a>
+            <a href="${base}services/google-ads.html" class="mega-menu-item"><span class="icon">🎯</span>Google Ads</a>
+            <a href="${base}services/seo.html" class="mega-menu-item"><span class="icon">🔍</span>SEO</a>
+            <a href="${base}services/website-development.html" class="mega-menu-item"><span class="icon">💻</span>Website Dev</a>
+            <a href="${base}services/branding-graphic-design.html" class="mega-menu-item"><span class="icon">🎨</span>Branding</a>
+            <a href="${base}services/video-editing.html" class="mega-menu-item"><span class="icon">🎬</span>Video Editing</a>
+            <a href="${base}services/ai-avatar-video.html" class="mega-menu-item"><span class="icon">🤖</span>AI Video</a>
+            <a href="${base}services/lead-generation.html" class="mega-menu-item"><span class="icon">🎯</span>Lead Gen</a>
+            <a href="${base}services/google-my-business.html" class="mega-menu-item"><span class="icon">📍</span>Google My Business</a>
+            <a href="${base}services/content-creation.html" class="mega-menu-item"><span class="icon">✍️</span>Content</a>
+            <a href="${base}services/crm-automation.html" class="mega-menu-item"><span class="icon">⚙️</span>CRM & Automation</a>
+            <a href="${base}services/linkedin-branding.html" class="mega-menu-item"><span class="icon">💼</span>LinkedIn</a>
+            <a href="${base}services/real-estate-marketing.html" class="mega-menu-item"><span class="icon">🏠</span>Real Estate</a>
+            <a href="${base}services/healthcare-marketing.html" class="mega-menu-item"><span class="icon">🏥</span>Healthcare</a>
+            <a href="${base}services/local-business-marketing.html" class="mega-menu-item"><span class="icon">🏪</span>Local Business</a>
+            <a href="${base}services/youtube-marketing.html" class="mega-menu-item"><span class="icon">▶️</span>YouTube</a>
+            <a href="${base}services/ecommerce-marketing.html" class="mega-menu-item"><span class="icon">🛒</span>E-commerce</a>
+            <a href="${base}services/whatsapp-marketing.html" class="mega-menu-item"><span class="icon">💬</span>WhatsApp</a>
+            <a href="${base}services/funnel-landing-page.html" class="mega-menu-item"><span class="icon">🚀</span>Funnels</a>
+          </div></div>
+        </li>
+        <li class="nav-item"><a href="${base}portfolio.html" class="nav-link">Portfolio</a></li>
+        <li class="nav-item"><a href="${base}case-studies.html" class="nav-link">Case Studies</a></li>
+        <li class="nav-item"><a href="${base}blog.html" class="nav-link">Blog</a></li>
+        <li class="nav-item"><a href="${base}pricing.html" class="nav-link">Pricing</a></li>
+        <li class="nav-item"><a href="${base}contact.html" class="nav-link nav-cta">Get Started</a></li>
+      </ul>
+    </div>
+  </nav>`;
+
+  const footerHTML = `
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo"><img src="${base}images/logo.png" alt="Internet Spark"></div>
+          <p>Internet Spark is a premium international digital marketing agency based in Ahmedabad, India. Data-driven strategies that transform businesses and generate measurable ROI.</p>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/internetspark" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/internet_spark/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/919313702720" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.youtube.com/@InternetSparkPrivateLimited" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/company/internet-spark/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div><h4 class="footer-heading">Quick Links</h4><ul class="footer-links">
+          <li><a href="${base}index.html"><i class="fas fa-chevron-right" style="font-size:0.7rem"></i> Home</a></li>
+          <li><a href="${base}about.html"><i class="fas fa-chevron-right" style="font-size:0.7rem"></i> About Us</a></li>
+          <li><a href="${base}services.html"><i class="fas fa-chevron-right" style="font-size:0.7rem"></i> Services</a></li>
+          <li><a href="${base}portfolio.html"><i class="fas fa-chevron-right" style="font-size:0.7rem"></i> Portfolio</a></li>
+          <li><a href="${base}case-studies.html"><i class="fas fa-chevron-right" style="font-size:0.7rem"></i> Case Studies</a></li>
+          <li><a href="${base}blog.html"><i class="fas fa-chevron-right" style="font-size:0.7rem"></i> Blog</a></li>
+          <li><a href="${base}pricing.html"><i class="fas fa-chevron-right" style="font-size:0.7rem"></i> Pricing</a></li>
+          <li><a href="${base}contact.html"><i class="fas fa-chevron-right" style="font-size:0.7rem"></i> Contact</a></li>
+        </ul></div>
+        <div><h4 class="footer-heading">Services</h4><ul class="footer-links">
+          <li><a href="${base}services/social-media-marketing.html"><i class="fas fa-chevron-right" style="font-size:0.7rem"></i> Social Media</a></li>
+          <li><a href="${base}services/meta-ads.html"><i class="fas fa-chevron-right" style="font-size:0.7rem"></i> Meta Ads</a></li>
+          <li><a href="${base}services/google-ads.html"><i class="fas fa-chevron-right" style="font-size:0.7rem"></i> Google Ads</a></li>
+          <li><a href="${base}services/seo.html"><i class="fas fa-chevron-right" style="font-size:0.7rem"></i> SEO</a></li>
+          <li><a href="${base}services/website-development.html"><i class="fas fa-chevron-right" style="font-size:0.7rem"></i> Website Dev</a></li>
+          <li><a href="${base}services/lead-generation.html"><i class="fas fa-chevron-right" style="font-size:0.7rem"></i> Lead Gen</a></li>
+          <li><a href="${base}services/real-estate-marketing.html"><i class="fas fa-chevron-right" style="font-size:0.7rem"></i> Real Estate</a></li>
+          <li><a href="${base}services/ecommerce-marketing.html"><i class="fas fa-chevron-right" style="font-size:0.7rem"></i> E-commerce</a></li>
+        </ul></div>
+        <div><h4 class="footer-heading">Contact Us</h4>
+          <div class="footer-contact-item"><div class="icon"><i class="fas fa-map-marker-alt"></i></div><div>A-407, KP Epitome, Nr. DAV International School, Makarba, Ahmedabad – 380051</div></div>
+          <div class="footer-contact-item"><div class="icon"><i class="fas fa-phone-alt"></i></div><div><a href="tel:+919313702720">+91 93137 02720</a></div></div>
+          <div class="footer-contact-item"><div class="icon"><i class="fas fa-envelope"></i></div><div><a href="mailto:yashworkonly16@gmail.com">yashworkonly16@gmail.com</a></div></div>
+          <div class="footer-contact-item"><div class="icon"><i class="fas fa-clock"></i></div><div>Mon–Sat: 9 AM – 7 PM</div></div>
+          <a href="${base}contact.html" class="btn btn-primary" style="margin-top:20px;display:inline-flex"><i class="fas fa-paper-plane"></i> Send a Message</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>© 2024 Internet Spark. All Rights Reserved. | Made with ❤️ in Ahmedabad, India</p><div style="display:flex;gap:20px"><a href="${base}privacy-policy.html" style="color:var(--text-muted);font-size:0.875rem">Privacy Policy</a><a href="${base}contact.html" style="color:var(--text-muted);font-size:0.875rem">Contact</a></div></div>
+    </div>
+  </footer>`;
+
+  // Inject nav
+  const navPlaceholder = document.getElementById('shared-nav');
+  if (navPlaceholder) navPlaceholder.outerHTML = navHTML;
+  else document.body.insertAdjacentHTML('afterbegin', navHTML);
+
+  // Inject footer  
+  const footerPlaceholder = document.getElementById('shared-footer');
+  if (footerPlaceholder) footerPlaceholder.outerHTML = footerHTML;
+})();

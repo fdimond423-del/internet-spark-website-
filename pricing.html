@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Internet Spark Pricing — Transparent digital marketing packages starting from ₹15,000/month. No hidden costs. 30-day money-back guarantee.">
+  <title>Pricing | Internet Spark - Digital Marketing Packages</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; align-items: start; }
+    .addon-table { width: 100%; border-collapse: collapse; }
+    .addon-table th { text-align: left; padding: 12px 16px; background: rgba(233,30,140,0.1); font-size: 0.875rem; font-weight: 600; color: var(--primary-light); }
+    .addon-table td { padding: 12px 16px; font-size: 0.9rem; color: var(--text-muted); border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .addon-table tr:last-child td { border-bottom: none; }
+    .addon-table tr:hover td { background: rgba(255,255,255,0.02); color: var(--text-light); }
+    .toggle-wrap { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 48px; }
+    .toggle-btn { background: var(--glass); border: 1px solid var(--glass-border); border-radius: 50px; width: 52px; height: 28px; cursor: pointer; position: relative; transition: var(--transition); }
+    .toggle-btn.active { background: var(--gradient-primary); border-color: transparent; }
+    .toggle-btn::after { content: ''; position: absolute; width: 22px; height: 22px; background: white; border-radius: 50%; top: 3px; left: 3px; transition: var(--transition); }
+    .toggle-btn.active::after { left: 27px; }
+    .toggle-label { font-weight: 600; font-size: 1rem; }
+    .toggle-label.active { color: var(--primary); }
+    .annual-badge { background: rgba(233,30,140,0.15); color: var(--primary-light); font-size: 0.75rem; padding: 2px 10px; border-radius: 50px; font-weight: 700; border: 1px solid rgba(233,30,140,0.3); }
+    .guarantee-bar { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; margin-top: 48px; padding: 32px; background: var(--glass); border: 1px solid var(--glass-border); border-radius: var(--border-radius-lg); }
+    .guarantee-item { display: flex; align-items: center; gap: 12px; }
+  </style>
+</head>
+<body>
+  <div class="page-loader"><img src="images/logo.png" alt="Internet Spark" class="loader-logo"><div class="loader-bar"><div class="loader-progress"></div></div></div>
+  <div class="animated-bg"></div><canvas id="particles-canvas"></canvas>
+  <a href="https://wa.me/919313702720" target="_blank" class="whatsapp-float" id="whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
+  <a href="tel:+919313702720" class="call-float" id="call-btn"><i class="fas fa-phone-alt"></i></a>
+  <div id="shared-nav"></div>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right" style="font-size:0.7rem"></i><span>Pricing</span></div>
+      <div class="section-badge" style="margin:0 auto 20px;width:fit-content"><i class="fas fa-tags"></i> Transparent Pricing</div>
+      <h1>Simple, <span class="text-gradient">Transparent Pricing</span></h1>
+      <p style="max-width:700px;margin:20px auto 0;font-size:1.1rem">No hidden costs. No long-term contracts. Just results-focused digital marketing at the right investment level for your business. All plans include a free strategy session.</p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container">
+      <div class="toggle-wrap">
+        <span class="toggle-label active" id="monthly-label">Monthly</span>
+        <div class="toggle-btn" id="billing-toggle" onclick="toggleBilling()"></div>
+        <span class="toggle-label" id="annual-label">Annual <span class="annual-badge">Save 15%</span></span>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Starter -->
+        <div class="pricing-card reveal">
+          <div class="plan-name">⚡ Starter</div>
+          <div class="plan-price" id="price-starter">₹15,000</div>
+          <div class="plan-period">per month</div>
+          <p style="font-size:0.875rem;color:var(--text-muted);margin:16px 0">Perfect for small businesses starting their digital journey.</p>
+          <ul class="plan-features">
+            <li>Social Media Management (2 platforms)</li>
+            <li>12 posts per month</li>
+            <li>Basic Meta Ads setup (up to ₹50K spend)</li>
+            <li>Monthly performance report</li>
+            <li>Email & WhatsApp support</li>
+            <li>Brand content calendar</li>
+            <li>Community management</li>
+            <li>Basic analytics tracking</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline" id="starter-btn" style="width:100%;justify-content:center;margin-top:24px">Get Started</a>
+        </div>
+
+        <!-- Growth (Featured) -->
+        <div class="pricing-card featured reveal">
+          <div class="plan-name">🚀 Growth</div>
+          <div class="plan-price" id="price-growth">₹35,000</div>
+          <div class="plan-period">per month</div>
+          <p style="font-size:0.875rem;color:var(--text-muted);margin:16px 0">For growing businesses ready to scale leads and revenue.</p>
+          <ul class="plan-features">
+            <li>Social Media (3 platforms)</li>
+            <li>20 posts + 8 stories per month</li>
+            <li>Meta + Google Ads management</li>
+            <li>SEO (On-page + Technical)</li>
+            <li>2 blog posts per month</li>
+            <li>Bi-weekly performance reports</li>
+            <li>Dedicated account manager</li>
+            <li>WhatsApp priority support</li>
+            <li>Competitor tracking</li>
+            <li>Basic CRM setup</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary" id="growth-btn" style="width:100%;justify-content:center;margin-top:24px"><i class="fas fa-rocket"></i> Get Started</a>
+        </div>
+
+        <!-- Scale -->
+        <div class="pricing-card reveal">
+          <div class="plan-name">📈 Scale</div>
+          <div class="plan-price" id="price-scale">₹75,000</div>
+          <div class="plan-period">per month</div>
+          <p style="font-size:0.875rem;color:var(--text-muted);margin:16px 0">For ambitious businesses ready to dominate their market.</p>
+          <ul class="plan-features">
+            <li>All social platforms managed</li>
+            <li>40+ posts per month + reels</li>
+            <li>Full ad management (all platforms)</li>
+            <li>Complete SEO + link building</li>
+            <li>Website dev & maintenance</li>
+            <li>Video editing (4 videos/month)</li>
+            <li>CRM setup & automation</li>
+            <li>4 blogs + email marketing</li>
+            <li>Weekly reporting & calls</li>
+            <li>Priority account team</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline" id="scale-btn" style="width:100%;justify-content:center;margin-top:24px">Get Started</a>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="pricing-card reveal">
+          <div class="plan-name">🏆 Enterprise</div>
+          <div class="plan-price">Custom</div>
+          <div class="plan-period">tailored to your goals</div>
+          <p style="font-size:0.875rem;color:var(--text-muted);margin:16px 0">Full-service partnership for large brands and enterprises.</p>
+          <ul class="plan-features">
+            <li>Everything in Scale, plus:</li>
+            <li>Unlimited creatives & content</li>
+            <li>AI video & avatar production</li>
+            <li>LinkedIn personal branding</li>
+            <li>Influencer marketing campaigns</li>
+            <li>Dedicated senior account team</li>
+            <li>Real-time analytics dashboard</li>
+            <li>Custom integrations & tech</li>
+            <li>Monthly strategy sessions</li>
+            <li>24/7 WhatsApp support</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary" id="enterprise-btn" style="width:100%;justify-content:center;margin-top:24px"><i class="fas fa-phone-alt"></i> Talk to Us</a>
+        </div>
+      </div>
+
+      <!-- Guarantees -->
+      <div class="guarantee-bar reveal">
+        <div class="guarantee-item"><span style="font-size:1.5rem">✅</span><span style="font-size:0.9rem">No Long-term Lock-in</span></div>
+        <div class="guarantee-item"><span style="font-size:1.5rem">💯</span><span style="font-size:0.9rem">30-Day Money-Back Guarantee</span></div>
+        <div class="guarantee-item"><span style="font-size:1.5rem">📊</span><span style="font-size:0.9rem">Full Transparency & Reporting</span></div>
+        <div class="guarantee-item"><span style="font-size:1.5rem">🔒</span><span style="font-size:0.9rem">Your Data & Accounts Secured</span></div>
+        <div class="guarantee-item"><span style="font-size:1.5rem">🎯</span><span style="font-size:0.9rem">ROI-Focused Campaigns</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Add-ons -->
+  <section class="section-padding" style="background:rgba(255,255,255,0.02);border-top:1px solid var(--glass-border);">
+    <div class="container">
+      <div class="section-header reveal"><div class="section-badge"><i class="fas fa-plus-circle"></i> Add-Ons</div><h2>Service <span class="text-gradient">Add-Ons</span></h2><p>Customize your plan with additional services to match your exact needs.</p></div>
+      <div class="glass-card reveal" style="overflow:auto">
+        <table class="addon-table">
+          <thead><tr><th>Service</th><th>Details</th><th>Price</th></tr></thead>
+          <tbody>
+            <tr><td>Extra Social Platform</td><td>Add management of 1 additional platform</td><td>+₹5,000/mo</td></tr>
+            <tr><td>Video Editing (4 Reels)</td><td>4 professional short-form videos per month</td><td>+₹8,000/mo</td></tr>
+            <tr><td>YouTube Channel Management</td><td>4 long-form videos + SEO optimization</td><td>+₹15,000/mo</td></tr>
+            <tr><td>AI Avatar Video (4 videos)</td><td>4 AI-generated avatar marketing videos</td><td>+₹12,000/mo</td></tr>
+            <tr><td>WhatsApp Marketing Campaign</td><td>Monthly broadcast to up to 10,000 contacts</td><td>+₹6,000/mo</td></tr>
+            <tr><td>LinkedIn Personal Branding</td><td>Profile optimization + 12 posts/month</td><td>+₹10,000/mo</td></tr>
+            <tr><td>Landing Page Design</td><td>1 conversion-optimized landing page</td><td>₹15,000 one-time</td></tr>
+            <tr><td>Logo & Brand Identity</td><td>Logo, color palette, typography guide</td><td>₹20,000 one-time</td></tr>
+            <tr><td>Website Development</td><td>Business website (5–10 pages)</td><td>Starting ₹25,000</td></tr>
+            <tr><td>CRM Setup (HubSpot/Zoho)</td><td>Full CRM configuration + automation</td><td>₹18,000 one-time</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header reveal"><div class="section-badge"><i class="fas fa-question-circle"></i> FAQ</div><h2>Pricing <span class="text-gradient">Questions Answered</span></h2></div>
+      <div style="max-width:800px;margin:0 auto">
+        <div class="faq-item"><div class="faq-question">Are there any setup fees or hidden charges?<div class="faq-icon"><i class="fas fa-plus"></i></div></div><div class="faq-answer"><div class="faq-answer-inner">No hidden fees whatsoever. The price you see is the price you pay. For paid ads (Google/Meta), ad spend is separate and goes directly to the platform — we don't mark it up. Our fee is purely for management, strategy, and creative services.</div></div></div>
+        <div class="faq-item"><div class="faq-question">Can I switch plans or cancel at any time?<div class="faq-icon"><i class="fas fa-plus"></i></div></div><div class="faq-answer"><div class="faq-answer-inner">Yes. We recommend a minimum of 3 months for best results, but there's no forced lock-in. You can upgrade, downgrade, or cancel with 30 days' notice. We also offer a 30-day money-back guarantee if you're not satisfied in the first month.</div></div></div>
+        <div class="faq-item"><div class="faq-question">Do you work with all business sizes?<div class="faq-icon"><i class="fas fa-plus"></i></div></div><div class="faq-answer"><div class="faq-answer-inner">Absolutely. From local shops to large enterprises, we have packages starting from ₹15,000/month. Our Starter plan is designed for small businesses just beginning digital marketing, while our Enterprise plan supports large-scale operations.</div></div></div>
+        <div class="faq-item"><div class="faq-question">What's included in ad spend management?<div class="faq-icon"><i class="fas fa-plus"></i></div></div><div class="faq-answer"><div class="faq-answer-inner">We create, manage, and optimize your ad campaigns. The ad spend (money paid to Google/Meta) is not included in our fees — you pay that directly to the platforms. Our management fee covers strategy, creative, copywriting, targeting, optimization, and reporting.</div></div></div>
+        <div class="faq-item"><div class="faq-question">Do you provide a custom quote for enterprise businesses?<div class="faq-icon"><i class="fas fa-plus"></i></div></div><div class="faq-answer"><div class="faq-answer-inner">Yes. For businesses with complex requirements, high ad budgets, or multiple locations/brands, we create completely custom proposals. Call us at +91 93137 02720 or email yashworkonly16@gmail.com for an enterprise consultation.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-bg"></div>
+    <div class="container" style="position:relative;z-index:1"><div class="reveal">
+      <h2 style="margin-bottom:20px">Not Sure Which Plan Is <span class="text-gradient">Right for You?</span></h2>
+      <p style="max-width:600px;margin:0 auto 40px;font-size:1.1rem">Talk to our team for a free consultation. We'll recommend the right plan based on your goals, budget, and industry.</p>
+      <div style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap">
+        <a href="contact.html" class="btn btn-primary" id="pricing-cta" style="font-size:1.1rem;padding:18px 40px"><i class="fas fa-rocket"></i> Get Custom Quote</a>
+        <a href="https://wa.me/919313702720?text=Hi! I want to know more about your pricing." target="_blank" class="btn btn-outline" id="pricing-wa" style="font-size:1.1rem;padding:18px 40px;background:#25D366;border-color:#25D366"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+      </div>
+    </div></div>
+  </section>
+
+  <div id="shared-footer"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="js/shared.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    let isAnnual = false;
+    const prices = {
+      starter: { monthly: '₹15,000', annual: '₹12,750' },
+      growth: { monthly: '₹35,000', annual: '₹29,750' },
+      scale: { monthly: '₹75,000', annual: '₹63,750' }
+    };
+    function toggleBilling() {
+      isAnnual = !isAnnual;
+      const toggle = document.getElementById('billing-toggle');
+      const monthlyLbl = document.getElementById('monthly-label');
+      const annualLbl = document.getElementById('annual-label');
+      toggle.classList.toggle('active', isAnnual);
+      monthlyLbl.classList.toggle('active', !isAnnual);
+      annualLbl.classList.toggle('active', isAnnual);
+      const mode = isAnnual ? 'annual' : 'monthly';
+      document.getElementById('price-starter').textContent = prices.starter[mode];
+      document.getElementById('price-growth').textContent = prices.growth[mode];
+      document.getElementById('price-scale').textContent = prices.scale[mode];
+    }
+  </script>
+</body>
+</html>
